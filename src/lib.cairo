@@ -236,7 +236,7 @@ mod Oracle {
         self.emit(UpdateTokenPriceBatch { feeder: sender, tids: tids, prices: token_prices, timestamps: timestamps });
     }
 
-	#[external(v0)]
+    #[external(v0)]
     fn get_token_price(self: @ContractState, tid: u8) -> (bool, u256, u8) {
         let p = self.price_oracles.read(tid);
         (true, p.value, p.decimal)
