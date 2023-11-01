@@ -169,7 +169,6 @@ mod Oracle {
         ref self: ContractState,
         tid: u8,
         token_price: u256,
-        price_decimal: u8,
         timestamp: u64 
     ) {
         let sender = get_caller_address();
